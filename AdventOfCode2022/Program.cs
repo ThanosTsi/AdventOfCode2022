@@ -9,7 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             var day1 = new Day1();
             Console.WriteLine("Hello World!");
-            await day1.CallDay1Methods();
+            await day1.CallDay1MethodsAsync();
         }
     }
 }

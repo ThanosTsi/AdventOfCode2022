@@ -9,7 +9,7 @@ namespace AdventOfCode2022
     public class Day1
     {
 
-        public async Task CallDay1Methods()
+        public async Task CallDay1MethodsAsync()
         {
             string[] lines;
             using (Task<string[]> file = File.ReadAllLinesAsync("C:\\Users\\Thanos\\Documents\\Visual Studio 2022\\Projects\\AdventOfCode2022\\ElfCalories.txt"))
