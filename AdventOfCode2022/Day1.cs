@@ -12,19 +12,19 @@ namespace AdventOfCode2022
         public async Task CallDay1MethodsAsync()
         {
             string[] lines;
-            using (Task<string[]> file = File.ReadAllLinesAsync("C:\\Users\\Thanos\\Documents\\Visual Studio 2022\\Projects\\AdventOfCode2022\\ElfCalories.txt"))
+            using (Task<string[]> file = File.ReadAllLinesAsync(@"..\..\..\..\ElfCalories.txt"))
             {
                 lines = await file;
                 
             }
 
-            StepOne(lines);
-            StepTwoLinq(lines);
-            StepTwo(lines);
+            PartOne(lines);
+            PartTwoLinq(lines);
+            PartTwo(lines);
         }
 
 
-        public void StepOne(string[] lines)
+        public void PartOne(string[] lines)
         {
             var topElf = 0;
             int elfIndex = 0;
@@ -56,11 +56,11 @@ namespace AdventOfCode2022
                 currentIndex++;
             }
 
-            Console.WriteLine($"part one: {topElf}");
+            Console.WriteLine($"day 1 part one: {topElf}");
         }
 
         //Using LINQ
-        public void StepTwoLinq(string[] lines)
+        public void PartTwoLinq(string[] lines)
         {
 
             //var input = new List<string>() {
@@ -106,11 +106,11 @@ namespace AdventOfCode2022
                 topThreeElvesSum += elf;
             }
 
-            Console.WriteLine($"part two LINQ: {topThreeElvesSum}");
+            Console.WriteLine($"day 1 part two LINQ: {topThreeElvesSum}");
         }
 
         //Without LINQ
-        public void StepTwo(string[] lines)
+        public void PartTwo(string[] lines)
         {
 
             //var input = new List<string>() {
@@ -167,7 +167,7 @@ namespace AdventOfCode2022
                 topThreeElvesSum += elf;
             }
 
-            Console.WriteLine($"part two: {topThreeElvesSum}");
+            Console.WriteLine($"day 1 part two: {topThreeElvesSum}");
         }
 
     }
